@@ -194,9 +194,28 @@ class LabelPredictor:
         
         # Sort by similarity
         ranked_results.sort(key=lambda x: x['similarity'], reverse=True)
+
+        unique_results = []
+        seen_contexts = set()
+        seen_responses = set()
+        
+        for result in ranked_results:
+            # Create a simplified version of text for comparison (lowercase, whitespace normalized)
+            context_simplified = ' '.join(result['context'].lower().split())
+            response_simplified = ' '.join(result['response'].lower().split())
+            
+            # Check if we've seen this content before
+            if context_simplified not in seen_contexts and response_simplified not in seen_responses:
+                unique_results.append(result)
+                seen_contexts.add(context_simplified)
+                seen_responses.add(response_simplified)
+                
+                # Break early if we have enough results
+                if len(unique_results) >= top_k:
+                    break
         
         # Return top results
         return {
             "predictions": predictions,
-            "results": ranked_results[:top_k]
+            "results": unique_results[:top_k]
         }
