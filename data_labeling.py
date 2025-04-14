@@ -76,7 +76,7 @@ Ensure you provide labels for all {len(conversations_batch)} conversations.
 """
     return prompt
 
-def label_conversations_batch_with_openai(conversations_batch, model="gpt-3.5-turbo-16k"):
+def label_conversations_batch_with_openai(conversations_batch, model="gpt-4o-mini"):
     """Use OpenAI API to label a batch of conversations in a single request"""
     prompt = create_batch_prompt(conversations_batch)
     
@@ -111,7 +111,7 @@ def label_conversations_batch_with_openai(conversations_batch, model="gpt-3.5-tu
         print(f"Error calling OpenAI API: {e}")
         return None
 
-def process_data_in_batches(df, batch_size=5, model="gpt-3.5-turbo-16k"):
+def process_data_in_batches(df, batch_size=5, model="gpt-4o-mini"):
     """Process all conversations in batches, with multiple conversations per API call"""
     print(f"Processing {len(df)} conversations with batch size {batch_size}...")
     
@@ -227,8 +227,8 @@ def main():
     # df = df.sample(sample_size, random_state=42).reset_index(drop=True)
     
     # Process data with OpenAI - using batches of 5 conversations per API call
-    # Using gpt-3.5-turbo-16k for larger context window to handle multiple conversations
-    labeled_df = process_data_in_batches(df, batch_size=5, model="gpt-3.5-turbo-16k")
+    # Using gpt-4o-mini for larger context window to handle multiple conversations
+    labeled_df = process_data_in_batches(df, batch_size=5, model="gpt-4o-mini")
     
     # Save labeled data
     labeled_df.to_csv(output_file, index=False)

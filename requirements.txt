@@ -7,3 +7,5 @@ datasets
 openai
 python-dotenv 
 tqdm
+scikit-learn
+tiktoken
