@@ -73,6 +73,7 @@ I built a polished web interface focused on usability for mental health professi
 ## Future Extensions
 With additional time, I would enhance the system with:
 
+- **Deployment**: Deploy using railway or render for python backend, Vercel for frontend development, database and ML model alongwith the application
 - **Advanced Analytics Dashboard**: Visualizations of common patient issues and effective therapeutic approaches
 - **Conversational AI Integration**: Adding capability for the system to suggest appropriate responses based on historical data
 - **Multi-modal Support**: Extending to handle audio and video therapy session transcripts
