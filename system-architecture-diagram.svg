@@ -1,0 +1,182 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and styling -->
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phaseGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phaseGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phaseGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phaseGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#64748b" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="url(#headerGrad)" rx="3" />
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Mental Health Counseling Assistant - System Architecture</text>
+
+  <!-- Phase 1: Data Processing & Analysis -->
+  <rect x="50" y="100" width="1100" height="150" fill="url(#phaseGrad1)" rx="10" stroke="#93c5fd" stroke-width="2" filter="url(#shadow)" />
+  <text x="600" y="130" font-family="Arial, sans-serif" font-size="20" fill="#1e40af" text-anchor="middle" font-weight="bold">Phase 1: Data Processing & Analysis</text>
+  
+  <!-- Phase 1 Components -->
+  <rect x="100" y="150" width="150" height="70" fill="white" rx="8" stroke="#93c5fd" stroke-width="2" />
+  <text x="175" y="185" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a" text-anchor="middle">Raw Dataset Loading</text>
+  
+  <rect x="300" y="150" width="150" height="70" fill="white" rx="8" stroke="#93c5fd" stroke-width="2" />
+  <text x="375" y="185" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a" text-anchor="middle">Data Cleaning</text>
+  
+  <rect x="500" y="150" width="200" height="70" fill="white" rx="8" stroke="#93c5fd" stroke-width="2" />
+  <text x="600" y="185" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a" text-anchor="middle">OpenAI Batch Labeling</text>
+  
+  <rect x="750" y="150" width="150" height="70" fill="white" rx="8" stroke="#93c5fd" stroke-width="2" />
+  <text x="825" y="185" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a" text-anchor="middle">Label Validation</text>
+  
+  <rect x="950" y="150" width="150" height="70" fill="white" rx="8" stroke="#93c5fd" stroke-width="2" />
+  <text x="1025" y="185" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a" text-anchor="middle">Database Storage</text>
+  
+  <!-- Phase 1 Arrows -->
+  <line x1="250" y1="185" x2="300" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="450" y1="185" x2="500" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="700" y1="185" x2="750" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="900" y1="185" x2="950" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+
+  <!-- Phase 2: Search System Development -->
+  <rect x="50" y="280" width="1100" height="150" fill="url(#phaseGrad2)" rx="10" stroke="#7dd3fc" stroke-width="2" filter="url(#shadow)" />
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="20" fill="#0c4a6e" text-anchor="middle" font-weight="bold">Phase 2: Search System Development</text>
+  
+  <!-- Phase 2 Components -->
+  <rect x="100" y="330" width="160" height="70" fill="white" rx="8" stroke="#7dd3fc" stroke-width="2" />
+  <text x="180" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">Vector Embeddings</text>
+  
+  <rect x="310" y="330" width="160" height="70" fill="white" rx="8" stroke="#7dd3fc" stroke-width="2" />
+  <text x="390" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">Inverted Index</text>
+  
+  <rect x="520" y="330" width="160" height="70" fill="white" rx="8" stroke="#7dd3fc" stroke-width="2" />
+  <text x="600" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">Label Prediction Model</text>
+  
+  <rect x="730" y="330" width="160" height="70" fill="white" rx="8" stroke="#7dd3fc" stroke-width="2" />
+  <text x="810" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">Search Algorithm</text>
+  
+  <rect x="940" y="330" width="160" height="70" fill="white" rx="8" stroke="#7dd3fc" stroke-width="2" />
+  <text x="1020" y="350" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">Result Ranking</text>
+  <text x="1020" y="375" font-family="Arial, sans-serif" font-size="14" fill="#0e7490" text-anchor="middle">System</text>
+  
+  <!-- Phase 2 Arrows -->
+  <line x1="260" y1="365" x2="310" y2="365" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="470" y1="365" x2="520" y2="365" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="680" y1="365" x2="730" y2="365" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="890" y1="365" x2="940" y2="365" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Database Connection -->
+  <line x1="1025" y1="220" x2="1025" y2="330" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5" />
+  <circle cx="1025" cy="275" r="5" fill="#64748b" />
+  
+  <!-- Phase 3: Backend API Development -->
+  <rect x="50" y="460" width="1100" height="150" fill="url(#phaseGrad3)" rx="10" stroke="#67e8f9" stroke-width="2" filter="url(#shadow)" />
+  <text x="600" y="490" font-family="Arial, sans-serif" font-size="20" fill="#155e75" text-anchor="middle" font-weight="bold">Phase 3: Backend API Development</text>
+  
+  <!-- Phase 3 Components -->
+  <rect x="140" y="510" width="180" height="70" fill="white" rx="8" stroke="#67e8f9" stroke-width="2" />
+  <text x="230" y="545" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">FastAPI Server</text>
+  
+  <rect x="380" y="510" width="180" height="70" fill="white" rx="8" stroke="#67e8f9" stroke-width="2" />
+  <text x="470" y="530" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">/search</text>
+  <text x="470" y="555" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">Endpoint</text>
+  
+  <rect x="620" y="510" width="180" height="70" fill="white" rx="8" stroke="#67e8f9" stroke-width="2" />
+  <text x="710" y="530" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">/labels</text>
+  <text x="710" y="555" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">Endpoint</text>
+  
+  <rect x="860" y="510" width="180" height="70" fill="white" rx="8" stroke="#67e8f9" stroke-width="2" />
+  <text x="950" y="530" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">/feedback</text>
+  <text x="950" y="555" font-family="Arial, sans-serif" font-size="14" fill="#164e63" text-anchor="middle">Endpoint</text>
+
+  <!-- Connect Phase 2 to Phase 3 -->
+  <line x1="600" y1="400" x2="600" y2="460" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5" />
+  <circle cx="600" cy="430" r="5" fill="#64748b" />
+  
+  <!-- Phase 3 Arrows -->
+  <line x1="320" y1="545" x2="380" y2="545" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="560" y1="545" x2="620" y2="545" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="800" y1="545" x2="860" y2="545" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Phase 4: Frontend Development -->
+  <rect x="50" y="640" width="1100" height="150" fill="url(#phaseGrad4)" rx="10" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)" />
+  <text x="600" y="670" font-family="Arial, sans-serif" font-size="20" fill="#334155" text-anchor="middle" font-weight="bold">Phase 4: Frontend Development</text>
+  
+  <!-- Phase 4 Components -->
+  <rect x="80" y="690" width="180" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="170" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">React Application</text>
+  
+  <rect x="300" y="690" width="150" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="375" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">Search Interface</text>
+  
+  <rect x="490" y="690" width="150" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="565" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">Label Display</text>
+  
+  <rect x="680" y="690" width="150" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="755" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">Conversation Cards</text>
+  
+  <rect x="870" y="690" width="150" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="945" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">Feedback Forms</text>
+  
+  <rect x="1060" y="690" width="70" height="70" fill="white" rx="8" stroke="#cbd5e1" stroke-width="2" />
+  <text x="1095" y="725" font-family="Arial, sans-serif" font-size="14" fill="#334155" text-anchor="middle">User</text>
+  
+  <!-- Phase 4 Arrows -->
+  <line x1="260" y1="725" x2="300" y2="725" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="450" y1="725" x2="490" y2="725" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="640" y1="725" x2="680" y2="725" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="830" y1="725" x2="870" y2="725" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="1020" y1="725" x2="1060" y2="725" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Connect Backend to Frontend -->
+  <line x1="230" y1="580" x2="230" y2="690" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5" />
+  <circle cx="230" cy="635" r="5" fill="#64748b" />
+  
+  <!-- User Query Flow -->
+  <path d="M1095,690 C1095,600 600,600 600,580" stroke="#dc2626" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+  <text x="850" y="610" font-family="Arial, sans-serif" font-size="12" fill="#dc2626" text-anchor="middle" font-style="italic">User Query Flow</text>
+  
+  <!-- Result Return Flow -->
+  <path d="M620,580 C620,620 900,620 900,690" stroke="#16a34a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+  <text x="760" y="630" font-family="Arial, sans-serif" font-size="12" fill="#16a34a" text-anchor="middle" font-style="italic">Result Return Flow</text>
+  
+  <!-- Feedback Flow -->
+  <path d="M950,690 C950,580 950,580 950,580" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+  <text x="1000" y="635" font-family="Arial, sans-serif" font-size="12" fill="#2563eb" text-anchor="middle" font-style="italic">Feedback Flow</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="20" width="220" height="50" fill="white" rx="5" stroke="#64748b" stroke-width="1" fill-opacity="0.7" />
+  <circle cx="70" cy="35" r="5" fill="#dc2626" />
+  <text x="85" y="40" font-family="Arial, sans-serif" font-size="12" fill="#0f172a">Search Query</text>
+  <circle cx="70" cy="55" r="5" fill="#16a34a" />
+  <text x="85" y="60" font-family="Arial, sans-serif" font-size="12" fill="#0f172a">Results Return</text>
+  <circle cx="160" cy="35" r="5" fill="#2563eb" />
+  <text x="175" y="40" font-family="Arial, sans-serif" font-size="12" fill="#0f172a">Feedback</text>
+  <circle cx="160" cy="55" r="5" fill="#64748b" />
+  <text x="175" y="60" font-family="Arial, sans-serif" font-size="12" fill="#0f172a">System Flow</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+</svg>
