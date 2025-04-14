@@ -9,3 +9,5 @@ python-dotenv
 tqdm
 scikit-learn
 tiktoken
+fastapi
+uvicorn
