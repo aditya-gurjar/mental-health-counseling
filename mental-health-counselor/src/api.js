@@ -1,7 +1,7 @@
-const API_URL = "http://localhost:8000"; // Change in production
+const VITE_API_URL = import.meta.env.VITE_API_URL || "https://your-backend-url.onrender.com";
 
 export const searchConversations = async (query, limit = 5) => {
-  const response = await fetch(`${API_URL}/search`, {
+  const response = await fetch(`${VITE_API_URL}/search`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export const searchConversations = async (query, limit = 5) => {
 };
 
 export const getLabels = async () => {
-  const response = await fetch(`${API_URL}/labels`);
+  const response = await fetch(`${VITE_API_URL}/labels`);
   
   if (!response.ok) {
     const error = await response.json();
@@ -29,7 +29,7 @@ export const getLabels = async () => {
 };
 
 export const getConversation = async (conversationId) => {
-  const response = await fetch(`${API_URL}/conversations/${conversationId}`);
+  const response = await fetch(`${VITE_API_URL}/conversations/${conversationId}`);
   
   if (!response.ok) {
     const error = await response.json();
@@ -40,7 +40,7 @@ export const getConversation = async (conversationId) => {
 };
 
 export const submitFeedback = async (conversationId, helpful, comments) => {
-  const response = await fetch(`${API_URL}/feedback`, {
+  const response = await fetch(`${VITE_API_URL}/feedback`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -9,6 +9,17 @@ from typing import List, Optional, Dict, Any
 import uvicorn
 from model_classes import LabelPredictor  # Import the class definition
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file if present
+load_dotenv()
+
+# Use environment variables with fallbacks
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL_PATH = os.getenv("MODEL_PATH", "data/label_prediction_model.pkl")
+DB_PATH = os.getenv("DB_PATH", "data/mental_health_db.sqlite")
+
+
 # Load the label prediction model
 try:
     with open("data/label_prediction_model.pkl", "rb") as f:

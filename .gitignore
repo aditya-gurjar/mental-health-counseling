@@ -5,5 +5,8 @@ __pycache__/
 *.json
 *.jsonl
 *.jsonl.gz
-
 .env
+*.py[cod]
+*$py.class
+.env
+.DS_Store
