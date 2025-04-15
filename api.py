@@ -22,7 +22,7 @@ DB_PATH = os.getenv("DB_PATH", "data/mental_health_db.sqlite")
 
 # Load the label prediction model
 try:
-    with open("data/label_prediction_model.pkl", "rb") as f:
+    with open(MODEL_PATH, "rb") as f:
         model = pickle.load(f)
     print("Model loaded successfully!")
 except Exception as e:
@@ -117,7 +117,7 @@ async def get_labels():
     """Get all available labels for filtering"""
     try:
         # Connect to the database
-        conn = sqlite3.connect("data/mental_health_db.sqlite")
+        conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
         
         # Get all issues
@@ -147,7 +147,7 @@ async def get_conversation(conversation_id: int):
     """Get a specific conversation by ID with all its labels"""
     try:
         # Connect to the database
-        conn = sqlite3.connect("data/mental_health_db.sqlite")
+        conn = sqlite3.connect(DB_PATH)
         
         # Get the conversation with its labels
         query = """
@@ -204,7 +204,7 @@ async def record_feedback(
     """Record user feedback on a conversation"""
     try:
         # Connect to the database
-        conn = sqlite3.connect("data/mental_health_db.sqlite")
+        conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
         
         # Check if feedback table exists, create if not
